@@ -1,0 +1,56 @@
+AllCops:
+  TargetRubyVersion: 2.7
+  NewCops: enable
+  DisplayCopNames: true
+  Exclude:
+    - 'bin/*'
+    - 'node_modules/**/*'
+    - 'db/**/*'
+    - 'vendor/**/*'
+
+Lint/EmptyBlock:
+  Enabled: false
+
+Layout/LineLength:
+  Exclude:
+    - 'config/initializers/devise.rb'
+
+Metrics/ClassLength:
+  Enabled: true
+  Exclude:
+    - 'app/contexts/uncap/financial_data/financial_indicators.rb'
+    - 'app/controllers/admin/users_controller.rb'
+    - 'app/forms/admin/user_form.rb'
+    - 'app/controllers/admin/gradings_controller.rb'
+
+Metrics/BlockLength:
+  Enabled: true
+  Exclude:
+    - 'spec/**/*'
+    - 'config/**/*'
+    - 'lib/tasks/import_investments.rake'
+
+Style/BlockComments:
+  Exclude:
+    - 'spec/**/*'
+    
+# TODO: Enable it in the next PR
+Style/RedundantBegin:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Exclude:
+    - 'app/contexts/uncap/non_financial_report/entities/question.rb'
+
+Style/FrozenStringLiteralComment:
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'test/**/*'
+
+Style/Documentation:
+  Enabled: false
+
+Naming/ConstantName:
+  Exclude:
+    - 'lib/wave_api/**/*'
