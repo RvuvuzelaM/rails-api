@@ -24,7 +24,9 @@ ActiveRecord::Schema.define(version: 2021_11_21_134912) do
   end
 
   create_table "notes", force: :cascade do |t|
-    t.string "name"
+    t.string "title"
+    t.string "content"
+    t.string "reference"
     t.bigint "group_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

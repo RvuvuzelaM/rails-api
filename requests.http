@@ -1,0 +1,41 @@
+###
+# @name createproject
+POST http://127.0.0.1:3000/api/v1/project
+Accept: applicaiton/json; charset=utf-8
+Content-Type: application/json; charset=utf-8
+
+{"name": "first project"}
+
+###
+# @name deleteproject
+DELETE http://127.0.0.1:3000/api/v1/project/1
+Accept: applicaiton/json; charset=utf-8
+Content-Type: application/json; charset=utf-8
+
+###
+# @name addgrouptoproject
+POST http://127.0.0.1:3000/api/v1/project/1/group
+Accept: applicaiton/json; charset=utf-8
+Content-Type: application/json; charset=utf-8
+
+{"name": "first group"}
+
+###
+# @name addnotetogroup
+POST http://127.0.0.1:3000/api/v1/project/1/group/1/note
+Accept: applicaiton/json; charset=utf-8
+Content-Type: application/json; charset=utf-8
+
+{"title": "Title", "content": "Content", "reference": "Reference"}
+
+###
+# @name getproject
+GET http://127.0.0.1:3000/api/v1/project/1
+Accept: applicaiton/json; charset=utf-8
+Content-Type: application/json; charset=utf-8
+
+###
+# @name getgroup
+GET http://127.0.0.1:3000/api/v1/project/1/group/1
+Accept: applicaiton/json; charset=utf-8
+Content-Type: application/json; charset=utf-8

@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  resources :project
+  namespace :api do
+    namespace :v1 do
+    resources :project do
+      resources :group do
+        resources :note
+      end
+    end
+  end
+end
 end
